@@ -2,16 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Employee Form</title>
+    <title>Employee List</title>
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/style.css'%}">
-
 </head>
 <body>
-<h3>Register Employee</h3>
-<form action="">
-    {{form.as_p}}
+<form method= "POST" action="">
+    {%csrf_token%}
+    {{form}}
+    <button type="submit">SUBMIT</button>
 </form>
-<button type="submit">SUBMIT</button>
+
 </body>
 </html>
